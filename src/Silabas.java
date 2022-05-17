@@ -22,7 +22,12 @@ public class Silabas {
 
     @Override
     public String toString() {
-        return silabas+"";
+        StringBuilder salida= new StringBuilder();
+        for (Silaba silaba:silabas             ) {
+            salida.append(silaba.toString());
+
+        }
+        return salida.toString();
     }
 
 
@@ -52,9 +57,9 @@ public class Silabas {
         boolean esAceptable=true;
         int i =0;
 
-        if (silaba.getSilabaTexto().length()+toString().length()-2<=texto.length()){
+        if (silaba.getSilabaTexto().length()+toString().length()<=texto.length()){
             while (esAceptable&& i<silaba.getSilabaTexto().length()){
-                esAceptable=texto.charAt(toString().length()+i-2)==silaba.getSilabaTexto().charAt(i);
+                esAceptable=texto.charAt(toString().length()+i)==silaba.getSilabaTexto().charAt(i);
 
                 i++;
             }

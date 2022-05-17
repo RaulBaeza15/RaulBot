@@ -13,24 +13,25 @@ public class CortaTextosBackTracking {
     }
 
     private void cortaTextoBacktracking(Silabas silabasResultantes, String texto, Booleano exito) {
+
         if(silabasResultantes.esMismoTexto(texto)){
             exito.setBoleano(true);
         }else {
             int i =0;
             while (!exito.isBoleano()&&i<silabas.getSilabas().size()){
 
+
                 if(silabasResultantes.esAceptable(texto, silabas.getSilabas().get(i))){
+
                     Silaba silabaActual = silabas.getSilabas().get(i);
                     silabasResultantes.getSilabas().add(silabaActual);
-                    System.out.println(silabasResultantes);
-
                     cortaTextoBacktracking( silabasResultantes,  texto,  exito);
                     if (!exito.isBoleano()){
                         silabasResultantes.getSilabas().remove(silabasResultantes.getSilabas().size()-1);
                     }
 
                 }
-
+                i++;
 
 
 

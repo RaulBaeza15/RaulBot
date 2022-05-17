@@ -10,7 +10,7 @@ public class Run {
         System.out.println(silabas.esAceptable("holaa",nnn));
 
         CortaTextosBackTracking cortaTextosBackTracking=new CortaTextosBackTracking();
-        System.out.println(cortaTextosBackTracking.cortaTexto("Ho"));
+        System.out.println(cortaTextosBackTracking.cortaTexto("Hola Buenas Tardes"));
 
 
     }
