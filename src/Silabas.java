@@ -25,4 +25,43 @@ public class Silabas {
         return silabas+"";
     }
 
+
+
+    public boolean esMismoTexto(String texto) {
+        boolean mismo=true;
+
+        if(toString().length()==texto.length()){
+            int i =0,j,caracterActual=0 ;
+            while(mismo&&i < silabas.size()){
+                j=0;
+                while (mismo&&j < silabas.get(i).getSilabaTexto().length()){
+                    mismo = texto.charAt(caracterActual)== silabas.get(i).getSilabaTexto().charAt(j);
+                    j++;
+                    caracterActual++;
+                }
+                i++;
+            }
+
+        }else {
+            mismo=false;
+        }
+        return mismo;
+    }
+
+    public boolean esAceptable(String texto, Silaba silaba) {
+        boolean esAceptable=true;
+        int i =0;
+
+        if (silaba.getSilabaTexto().length()+toString().length()-2<=texto.length()){
+            while (esAceptable&& i<silaba.getSilabaTexto().length()){
+                esAceptable=texto.charAt(toString().length()+i-2)==silaba.getSilabaTexto().charAt(i);
+
+                i++;
+            }
+        }else{
+            esAceptable=false;
+        }
+
+        return esAceptable;
+    }
 }
