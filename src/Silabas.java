@@ -69,4 +69,7 @@ public class Silabas {
 
         return esAceptable;
     }
+    //@TODO Implementar archivos de audio y metodo reproducir
+    public void reproducir() {
+    }
 }
