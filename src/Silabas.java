@@ -11,10 +11,18 @@ public class Silabas {
 
     }
 
+    public Silabas() {
+        silabas=new ArrayList<>();
+    }
+
+    public ArrayList<Silaba> getSilabas() {
+        return silabas;
+    }
+
+
     @Override
     public String toString() {
-        return "Silabas{" +
-                "silabas=" + silabas +
-                '}';
+        return silabas+"";
     }
+
 }
