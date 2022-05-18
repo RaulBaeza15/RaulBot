@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.awt.Graphics;
+import java.applet.Applet;
 
 public class Silabas {
     private final ArrayList<Silaba> silabas;
@@ -71,5 +73,10 @@ public class Silabas {
     }
     //@TODO Implementar archivos de audio y metodo reproducir
     public void reproducir() {
+        for (Silaba silaba: silabas             ) {
+            silaba.reproducirSonido();
+
+        }
     }
+
 }

@@ -25,6 +25,7 @@ public class CortaTextosBackTracking {
 
                     Silaba silabaActual = silabas.getSilabas().get(i);
                     silabasResultantes.getSilabas().add(silabaActual);
+                    System.out.println(silabasResultantes.toString());
                     cortaTextoBacktracking( silabasResultantes,  texto,  exito);
                     if (!exito.isBoleano()){
                         silabasResultantes.getSilabas().remove(silabasResultantes.getSilabas().size()-1);
